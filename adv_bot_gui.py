@@ -762,10 +762,13 @@ class WoWBotGUI:
                 self.current_window_label.config(text=f"🎯 Current: {current_window['title'][:30]}...")
                 
                 if self.switch_to_window(current_window):
-                    # Press the '0' key
-                    pyautogui.press('0')
+                    # Press and hold '0' for a random duration (0.1–1.0s)
+                    hold_duration = random.uniform(0.1, 1.0)
+                    pyautogui.keyDown('0')
+                    time.sleep(hold_duration)
+                    pyautogui.keyUp('0')
                     current_time = time.strftime('%H:%M:%S')
-                    self.log_message(f"⌨️ Key '0' pressed in window '{current_window['title']}' at {current_time}", "SUCCESS")
+                    self.log_message(f"⌨️ Key '0' pressed (held {hold_duration:.2f}s) in window '{current_window['title']}' at {current_time}", "SUCCESS")
                     
                     # Move to next window
                     self.current_window_index = (self.current_window_index + 1) % len(self.selected_windows)
