@@ -1,0 +1,11 @@
+{
+  "base_interval": 90.0,
+  "random_range": 60.0,
+  "anti_afk_enabled": false,
+  "screenshots_enabled": true,
+  "element_detection_enabled": true,
+  "element1_template_path": "elemento1.png",
+  "element2_template_path": "elemento2.png",
+  "detection_threshold": 0.7,
+  "wait_after_click": 5.0
+}
