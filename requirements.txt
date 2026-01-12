@@ -4,5 +4,5 @@ pywin32==311
 rich==13.7.1
 questionary==2.0.1
 Pillow==11.3.0
-numpy==2.2.6
+numpy==2.4.1
 opencv-python-headless==4.12.0.88
